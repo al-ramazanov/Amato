@@ -1,0 +1,169 @@
+.installments {
+    // .installments__container
+
+    &__container {
+        display: flex;
+        align-items: strech;
+        justify-content: space-between;
+        @include adaptiveValue(gap, 30, 10, 1);
+        @media screen and (max-width: 1024px) {
+            display: block;
+        }
+    }
+
+    // .installments__form
+
+    &__form {
+        font-family: "Commissioner";
+        color: $mainColor;
+        flex: auto;
+    }
+
+    // .installments__pic
+
+    &__pic {
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        img {
+            max-width: 100%;
+        }
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
+    }
+}
+.form-installments {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    @include adaptiveValue(padding-top, 46, 20, 1);
+    @include adaptiveValue(padding-bottom, 58, 20, 1);
+    // .form-installments__title
+
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: calc(24 / 20);
+        @include adaptiveValue(margin-bottom, 17, 10, 1);
+        padding: 0 35px;
+    }
+
+    // .form-installments__descr
+
+    &__descr {
+        font-weight: 700;
+        @include adaptiveValue(font-size, 18, 16, 1);
+        line-height: calc(22 / 18);
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        padding: 0 35px;
+        @include adaptiveValue(margin-bottom, 47, 20, 1);
+        span {
+            display: inline-flex;
+            align-items: center;
+            &::before {
+                content: "";
+                width: 5px;
+                height: 5px;
+                background-color: $yellowColor;
+                margin-right: 6px;
+                display: inline-block;
+                border-radius: 50%;
+            }
+        }
+        @media screen and (max-width: 1370px) {
+            display: block;
+        }
+    }
+
+    // .form-installments__form
+
+    &__form {
+    }
+
+    // .form-installments__wrapper
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 0 34px;
+        &:not(:last-child) {
+            @include adaptiveValue(margin-bottom, 30, 15, 1);
+        }
+        &.mod {
+            @include adaptiveValue(margin-bottom, 22, 13, 1);
+        }
+        @media screen and (max-width: 1370px) {
+            display: block;
+        }
+    }
+
+    // .form-installments__placeholder
+
+    &__placeholder {
+        font-weight: 400;
+        @include adaptiveValue(font-size, 20, 16, 1);
+        line-height: calc(24 / 20);
+        text-transform: capitalize;
+        @media screen and (max-width: 1370px) {
+            margin-bottom: 15px;
+        }
+    }
+    //.form-installments-input
+
+    &__input {
+        border: 1px solid #e5e5e5;
+        border-radius: 46px;
+        background-color: #ffffff;
+        height: 47px;
+        padding: 14px 0 14px 26px;
+        flex: 0 0 258px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: calc(20 / 16);
+        &.long {
+            max-width: 275px;
+        }
+        @media screen and (max-width: 1370px) {
+            width: 100%;
+            &.long {
+                max-width: initial;
+            }
+            &.long:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    // .form-installments__price
+
+    &__price {
+        font-weight: 600;
+        font-size: 20px;
+        @include adaptiveValue(font-size, 20, 14, 1);
+        line-height: calc(24 / 20);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include adaptiveValue(margin-bottom, 33, 12, 1);
+        background-color: #f1f0f0;
+        padding: 17px 34px;
+    }
+
+    // .form-installments__btn
+
+    &__btn {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: calc(20 / 16);
+        display: block;
+        padding: 14px 10px;
+        text-align: center;
+        background-color: $yellowColor;
+        width: 100%;
+        border-radius: 28px;
+    }
+}

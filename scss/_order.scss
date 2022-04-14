@@ -1,0 +1,197 @@
+.order {
+    // .order__container
+
+    &__container {
+    }
+
+    // .order__cards
+
+    &__cards {
+        @media screen and (min-width: 560px) {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+            gap: 38px;
+        }
+        @include adaptiveValue(margin-bottom, 100, 40, 1);
+    }
+
+    // .order__card
+
+    &__card {
+        position: relative;
+        img {
+            max-width: 100%;
+            @media screen and (max-width: 560px) {
+                width: 100%;
+            }
+        }
+        @media screen and (max-width: 560px) {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    // .order__card-title
+
+    &__card-title {
+        font-weight: 600;
+        font-size: 22px;
+        color: #ffffff;
+        line-height: calc(27 / 22);
+        position: absolute;
+        bottom: 38px;
+        left: 19px;
+        z-index: 2;
+    }
+}
+
+.order {
+    // .order__promo
+
+    &__promo {
+        font-family: "Commissioner";
+        text-transform: capitalize;
+        color: #ffffff;
+        background: url(../img/order/order-bg.jpg) center no-repeat;
+        background-size: cover;
+    }
+}
+.promo {
+    // .promo__container
+
+    &__container {
+        display: flex;
+        @media screen and (max-width: 992px) {
+            flex-direction: column;
+        }
+    }
+
+    // .promo__pic
+
+    &__pic {
+        align-self: end;
+        @media screen and (max-width: 992px) {
+            order: 2;
+            align-self: initial;
+        }
+        img {
+            max-width: 100%;
+            position: relative;
+            left: -15px;
+            height: 100%;
+        }
+    }
+
+    // .promo__text
+
+    &__text {
+        text-align: center;
+        margin-left: 80px;
+        margin-top: 60px;
+        @media screen and (max-width: 992px) {
+            order: 1;
+            margin-left: 0px;
+        }
+    }
+
+    // .promo__title
+
+    &__title {
+        font-weight: 600;
+        @include adaptiveValue(font-size, 43, 30, 1);
+        line-height: calc(53 / 43);
+        margin-bottom: 14px;
+        &::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 5px;
+            background-color: $yellowColor;
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+    }
+
+    // .promo__subtitle
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: calc(22 / 18);
+        margin-bottom: 15px;
+    }
+
+    // .promo__gift
+
+    &__gift {
+        margin-bottom: 28px;
+    }
+
+    // .promo__gift-title
+
+    &__gift-title {
+        font-weight: 600;
+        @include adaptiveValue(font-size, 32, 28, 1);
+        line-height: calc(39 / 32);
+        margin-bottom: 10px;
+    }
+
+    // .promo__gift-link
+
+    &__gift-link {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: calc(24 / 20);
+        color: $mainColor;
+        padding: 8px 60px;
+        background-color: $yellowColor;
+        border-radius: 45px;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    // .promo__gift-sub
+
+    &__gift-sub {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: calc(44 / 36);
+    }
+
+    // .promo__timer
+
+    &__timer {
+        text-align: initial;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 34px;
+        background-color: $yellowColor;
+        color: $mainColor;
+        font-weight: 400;
+        @include adaptiveValue(font-size, 32, 25, 1);
+        line-height: 39px;
+        @include adaptiveValue(gap, 18, 5, 1);
+        border-radius: 10px;
+        max-width: 390px;
+        margin: 0 auto;
+    }
+
+    // .promo__timer-item
+
+    &__timer-item {
+        text-align: center;
+        span:not(:last-child) {
+            text-align: center;
+            font-weight: 600;
+            @include adaptiveValue(font-size, 30, 22, 1);
+            line-height: calc(37 / 30);
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+}

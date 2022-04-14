@@ -1,0 +1,88 @@
+.sale {
+    @include adaptiveValue(margin-bottom, 50, 20, 1);
+    // .sale__container
+
+    &__container {
+        position: relative;
+        height: 555px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        @media screen and (max-width: 1400px) {
+            display: block;
+            height: initial;
+        }
+    }
+
+    // .sale__pic
+
+    &__pic {
+        position: absolute;
+        @include adaptiveValue(left, -63, -204, 1);
+        top: 0;
+        @media screen and (max-width: 1400px) {
+            position: relative;
+        }
+        img {
+            @include adaptiveValue(height, 555, 360, 1);
+        }
+    }
+
+    // .sale__text
+
+    &__text {
+        position: relative;
+        z-index: 2;
+        color: $mainColor;
+        text-align: center;
+        @media screen and (max-width: 1400px) {
+            text-align: left;
+            padding-top: 20px;
+        }
+    }
+
+    // .sale__title
+
+    &__title {
+        font-family: "Commissioner";
+        font-style: normal;
+        font-weight: 600;
+        @include adaptiveValue(font-size, 85, 35, 1);
+        line-height: calc(104 / 85);
+        color: $yellowColor;
+    }
+
+    // .sale__subtitle
+
+    &__subtitle {
+        font-weight: 600;
+        @include adaptiveValue(font-size, 48, 23, 1);
+        line-height: calc(59 / 48);
+        @include adaptiveValue(margin-bottom, 20, 10, 1);
+    }
+
+    // .sale__descr
+
+    &__descr {
+        font-weight: 300;
+        font-size: 25px;
+        @include adaptiveValue(font-size, 25, 17, 1);
+        line-height: calc(31 / 25);
+        @include adaptiveValue(margin-bottom, 27, 15, 1);
+    }
+
+    // .sale__link
+
+    &__link {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 20px 40px;
+        background-color: #ffcc29;
+        border-radius: 40px;
+        display: inline-block;
+        @media screen and (max-width: 767.99px) {
+            padding: 13px 40px;
+        }
+    }
+}

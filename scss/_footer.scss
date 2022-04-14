@@ -1,0 +1,239 @@
+.footer {
+    color: $mainColor;
+    // .footer__container
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        @include adaptiveValue(gap, 185, 15, 1);
+        flex-wrap: wrap;
+        @media screen and (max-width: 992.99px) {
+            display: block;
+        }
+    }
+    // .footer__right
+
+    &__right {
+        @media screen and (max-width: 992.99px) {
+            margin-bottom: 20px;
+        }
+    }
+    // .footer__left
+
+    &__left {
+        flex: 1 1 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        @include adaptiveValue(column-gap, 139, 20, 1);
+        @include adaptiveValue(row-gap, 56, 15, 1);
+        @media screen and (max-width: 767.99px) {
+            display: block;
+        }
+    }
+    .menu {
+        // .menu__list
+
+        &__list {
+        }
+
+        // .menu__link
+
+        &__link {
+        }
+    }
+    .menu-footer {
+        // .menu-footer__list
+
+        &__list {
+        }
+
+        // .menu-footer__list-item
+
+        &__list-item {
+        }
+
+        // .menu-footer__link
+
+        &__link {
+        }
+    }
+    .menu-list {
+        // .menu-list__item
+
+        &__item {
+        }
+    }
+    .active {
+    }
+
+    // .footer__column
+
+    &__column {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    // .footer__logo
+
+    &__logo {
+        margin-bottom: 37px;
+        @include adaptiveValue(max-width, 250, 135, 1);
+        img {
+            max-width: 100%;
+        }
+    }
+
+    // .footer__soc
+
+    &__soc {
+    }
+
+    // .footer__menu
+
+    &__menu {
+        display: block;
+    }
+
+    // .footer__column-title
+
+    &__column-title {
+        font-family: "Playfair Display";
+        font-weight: 700;
+        font-size: 18px;
+        line-height: calc(24 / 18);
+        margin-bottom: 12px;
+        position: relative;
+        &::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: $yellowColor;
+            margin-top: 4px;
+        }
+        &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-top: 3px solid $mainColor;
+            border-right: 3px solid $mainColor;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 8px;
+            transform: rotate(135deg);
+            transition: 0.3s;
+            display: none;
+            @media screen and (max-width: 992.99px) {
+                display: block;
+            }
+        }
+        &.open {
+            &::before {
+                transform: rotate(-45deg);
+                top: 13px;
+            }
+        }
+        @media screen and (max-width: 992.99px) {
+            cursor: pointer;
+        }
+    }
+
+    // .footer__column-list
+
+    &__column-list {
+        @media screen and (max-width: 992.99px) {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        &.open {
+            max-height: 1000px;
+        }
+    }
+
+    // .footer__column-item
+
+    &__column-item {
+        display: flex;
+        gap: 16px;
+        font-size: 20px;
+        align-items: center;
+        color: $yellowColor;
+        &:not(:last-child) {
+            margin-bottom: 17px;
+        }
+    }
+
+    // .footer__links
+
+    &__links {
+        display: none;
+        @media screen and (max-width: 992.99px) {
+            display: block;
+            
+        }
+    }
+    // .footer__link
+
+    &__link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: calc(20 / 16);
+        color: $mainColor;
+        text-transform: capitalize;
+    }
+}
+.menu {
+    // .menu__list
+
+    &__list {
+    }
+
+    // .menu__link
+
+    &__link {
+    }
+}
+.menu-footer {
+    // .menu-footer__list
+
+    &__list {
+        display: block;
+        @media screen and (max-width: 992.99px) {
+            max-height: 0;
+            overflow: hidden;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            &.open {
+                max-height: 1000px;
+            }
+        }
+    }
+
+    // .menu-footer__list-item
+
+    &__list-item {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    // .menu-footer__link
+
+    &__link {
+    }
+}
+.menu-list {
+    // .menu-list__item
+
+    &__item {
+    }
+}
+.active {
+}
+.icon-location {
+}
+.icon-mail {
+}

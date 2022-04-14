@@ -1,0 +1,70 @@
+.callback {
+    background: $yellowColor url(../img/callback/callback-bg.png) center no-repeat;
+    @include adaptiveValue(margin-bottom, 40, 15, 1);
+    // .callback__container
+
+    &__container {
+        color: $mainColor;
+        text-align: center;
+        padding: 78px 0;
+        font-family: "Commissioner";
+    }
+
+    // .callback__title
+
+    &__title {
+        font-family: "Playfair Display";
+        font-weight: 700;
+        @include adaptiveValue(font-size, 43, 25, 1);
+        line-height: calc(57 / 43);
+        color: #39373a;
+        @include adaptiveValue(margin-bottom, 25, 15, 1);
+    }
+
+    // .callback__subtitle
+
+    &__subtitle {
+        font-weight: 400;
+        @include adaptiveValue(font-size, 20, 18, 1);
+        line-height: calc(24 / 20);
+        @include adaptiveValue(margin-bottom, 43, 20, 1);
+    }
+
+    // .callback__form
+
+    &__form {
+        display: flex;
+        @include adaptiveValue(gap, 30, 15, 1);
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        button {
+            padding: 14px 30px;
+            color: #ffffff;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: calc(20 / 16);
+            background-color: $mainColor;
+            border-radius: 28px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            &:hover {
+                background-color: #000000;
+            }
+        }
+    }
+
+    // .callback__input
+
+    &__input {
+        background-color: #ffffff;
+        border-radius: 28px;
+        border: 0;
+        padding: 14px 30px;
+        outline: none;
+        &::-webkit-inner-spin-button {
+            appearance: none;
+        }
+    }
+}

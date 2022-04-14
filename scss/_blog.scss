@@ -1,0 +1,72 @@
+.blog {
+    @include adaptiveValue(margin-bottom, 86, 30, 1);
+    // .blog__container
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        @include adaptiveValue(gap, 64, 20, 1);
+    }
+
+    // .blog__card
+
+    &__card {
+        font-weight: 400;
+    }
+}
+.card-blog {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 16px 30px 40px 30px;
+
+    // .card-blog__pic
+
+    &__pic {
+        @include adaptiveValue(margin-bottom, 27, 15, 1);
+        img {
+            max-width: 100%;
+        }
+    }
+
+    // .card-blog__text
+
+    &__text {
+    }
+
+    // .card-blog__date
+
+    &__date {
+        font-size: 15px;
+        line-height: calc(18 / 15);
+        text-transform: capitalize;
+        @include adaptiveValue(margin-bottom, 15, 10, 1);
+    }
+
+    // .card-blog__title
+
+    &__title {
+        font-family: "Playfair Display";
+        font-weight: 700;
+        @include adaptiveValue(font-size, 24, 22, 1);
+        line-height: calc(32 / 24);
+        margin-bottom: 7px;
+    }
+
+    // .card-blog__subtitle
+
+    &__subtitle {
+        @include adaptiveValue(font-size, 18, 16, 1);
+        line-height: calc(22 / 18);
+        @include adaptiveValue(margin-bottom, 24, 15, 1);
+    }
+
+    // .card-blog__link
+
+    &__link {
+        padding: 14px 22px;
+        background-color: $yellowColor;
+        text-align: center;
+        border-radius: 28px;
+        display: inline-block;
+    }
+}

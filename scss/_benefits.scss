@@ -1,0 +1,47 @@
+.benefits {
+    @include adaptiveValue(margin-bottom, 93, 30, 1);
+    // .benefits__container
+
+    &__container {
+        @media screen and (min-width: 330px) {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            @include adaptiveValue(gap, 43, 20, 1);
+        }
+    }
+
+    // .benefits__card
+
+    &__card {
+        @media screen and (max-width: 330px) {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+.card-benefits {
+    font-family: "Playfair Display";
+    color: $mainColor;
+    text-align: center;
+    padding: 30px 35px 75px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    img {
+        margin-bottom: 10px;
+    }
+    // .card-benefits__title
+    &__title {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: calc(29 / 22);
+        margin-bottom: 10px;
+    }
+    // .card-benefits__subtitle
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: calc(20 / 16);
+    }
+}

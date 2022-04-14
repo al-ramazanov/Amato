@@ -1,0 +1,61 @@
+.process {
+    @include adaptiveValue(margin-bottom, 86, 30, 1);
+    // .process__container
+
+    &__container {
+        color: $mainColor;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        @include adaptiveValue(gap, 45, 20, 1);
+    }
+    // .process__card
+
+    &__card {
+        background: #ffffff;
+        box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        overflow: hidden;
+        padding-bottom: 28px;
+        img {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+
+    // .process__title
+
+    &__title {
+        font-family: "Playfair Display";
+        font-weight: 700;
+        font-size: 20px;
+        line-height: calc(27 / 20);
+        margin-bottom: 9px;
+        padding: 0 17px;
+
+        span {
+            font-family: "Commissioner";
+            font-size: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 20px;
+                height: 1px;
+                background-color: #cccccc;
+                margin: 0 7px;
+            }
+        }
+    }
+
+    // .process__sub
+
+    &__sub {
+        font-family: "Commissioner";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: calc(20 / 16);
+        padding: 0 17px;
+    }
+}

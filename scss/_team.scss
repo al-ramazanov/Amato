@@ -1,0 +1,58 @@
+.team {
+    background-color: #f9f9f9;
+    padding-top: 1px;
+    padding-bottom: 66px;
+    @include adaptiveValue(margin-bottom, 86, 30, 1);
+    // .team__container
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        @include adaptiveValue(gap, 150, 20, 1);
+    }
+
+    // .team__card
+
+    &__card {
+        text-align: center;
+        font-family: Commissioner;
+        color: $mainColor;
+    }
+
+    // .team__pic
+
+    &__pic {
+        border-radius: 50%;
+        background-color: $yellowColor;
+        display: inline-block;
+        margin-bottom: 18px;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    // .team__title
+
+    &__title {
+        margin-bottom: 7px;
+        font-weight: 600;
+        font-size: 19px;
+        line-height: calc(23 / 19);
+    }
+
+    // .team__subtitle
+
+    &__subtitle {
+        margin-bottom: 7px;
+        font-weight: 100;
+        font-size: 14px;
+        line-height: calc(17 / 14);
+    }
+
+    // .team__descr
+
+    &__descr {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: calc(20 / 16);
+    }
+}

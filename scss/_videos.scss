@@ -1,0 +1,37 @@
+.videos {
+    @include adaptiveValue(margin-bottom, 100, 30, 1);
+    // .videos__container
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+        @include adaptiveValue(gap, 50, 25, 1);
+        @media screen and (max-width: 500px) {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+    }
+
+    // .videos__video
+
+    &__video {
+        background: #c4c4c4;
+        height: 264px;
+        border-radius: 10px;
+        overflow: hidden;
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.block {
+    // .block__header
+
+    &__header {
+    }
+
+    // .block__header-title
+
+    &__header-title {
+    }
+}
