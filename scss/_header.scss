@@ -160,22 +160,10 @@
         padding: 4px 12px;
         border: 0.5px solid #efefef;
         border-radius: 54px;
+        position: relative;
+        transition: 0.3s ease;
+        cursor: pointer;
         span {
-            padding-right: 13px;
-            position: relative;
-            &::after {
-                content: "";
-                width: 8px;
-                height: 8px;
-                display: inline-block;
-                border-top: 2px solid $mainColor;
-                border-right: 2px solid $mainColor;
-                position: absolute;
-                top: calc(50% + -2px);
-                left: 100%;
-                transform: translate(-100%, -50%) rotate(135deg);
-                transition: 0.3s ease;
-            }
             &.open {
                 &::after {
                     top: 50%;
@@ -183,8 +171,32 @@
                 }
             }
         }
+        &:hover {
+            background-color: #d6d2d2;
+        }
     }
 }
+.lang {
+    // .lang__rus
+    &__rus {
+        padding-right: 13px;
+        position: relative;
+        &::after {
+            content: "";
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            border-top: 2px solid $mainColor;
+            border-right: 2px solid $mainColor;
+            position: absolute;
+            top: calc(50% + -2px);
+            left: 100%;
+            transform: translate(-100%, -50%) rotate(135deg);
+            transition: 0.3s ease;
+        }
+    }
+}
+
 .menu-list {
     // .menu-list__item
 

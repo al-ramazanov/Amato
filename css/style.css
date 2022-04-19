@@ -419,14 +419,28 @@ input[type="number"]::-webkit-inner-spin-button {
   padding: 4px 12px;
   border: 0.5px solid #efefef;
   border-radius: 54px;
+  position: relative;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  cursor: pointer;
 }
 
-.menu__language span {
+.menu__language span.open::after {
+  top: 50%;
+  -webkit-transform: translate(-100%, -50%) rotate(45deg);
+          transform: translate(-100%, -50%) rotate(45deg);
+}
+
+.menu__language:hover {
+  background-color: #d6d2d2;
+}
+
+.lang__rus {
   padding-right: 13px;
   position: relative;
 }
 
-.menu__language span::after {
+.lang__rus::after {
   content: "";
   width: 8px;
   height: 8px;
@@ -440,12 +454,6 @@ input[type="number"]::-webkit-inner-spin-button {
           transform: translate(-100%, -50%) rotate(135deg);
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
-}
-
-.menu__language span.open::after {
-  top: 50%;
-  -webkit-transform: translate(-100%, -50%) rotate(45deg);
-          transform: translate(-100%, -50%) rotate(45deg);
 }
 
 @media screen and (max-width: 767.99px) {
