@@ -50,7 +50,7 @@ function countDown() {
     let curentYear = new Date().getFullYear();
 
     // получить след год
-    let nextYear = new Date(`4  28 ${curentYear} 00:00:00`)
+    let nextYear = new Date(`4  28 2024 00:00:00`)
 
 
     setInterval(function ed() {
